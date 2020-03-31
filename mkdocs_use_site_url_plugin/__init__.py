@@ -7,6 +7,8 @@ md_link = re.compile(r'''(\[[^]]*]\()(/[^)]*)(\))|(\[[^]]*]:\s)(/[^\n\r)]*)''', 
 
 
 def process_link(link: str, site_url: str):
+    if link.startswith("/"):
+        link = link[1:]
     return site_url + link
 
 
