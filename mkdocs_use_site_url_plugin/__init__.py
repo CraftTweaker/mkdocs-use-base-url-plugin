@@ -31,6 +31,6 @@ def process(site_url: str):
     return re_write_link
 
 
-def add_site_path(content, site_url: str):
+def add_site_url(content, site_url: str):
     file_data = re.sub(md_link, process(site_url), content)
     return file_data

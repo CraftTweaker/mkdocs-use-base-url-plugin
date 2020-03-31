@@ -62,7 +62,7 @@ setup(
     long_description_content_type="text/markdown",
     entry_points={
         "mkdocs.plugins": [
-            "use-site-url = use-site-url.plugin:UseSitePathPlugin"
+            "use-site-url = use_site_url.plugin:UseSiteUrlPlugin"
         ]
     },
     cmdclass={"upload": UploadCommand}, install_requires=['mkdocs']
