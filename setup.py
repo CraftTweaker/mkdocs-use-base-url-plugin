@@ -7,8 +7,6 @@ from setuptools import setup, Command
 
 HERE = Path(__file__).parent
 
-README = (HERE.joinpath("readme.md")).read_text()
-
 
 class UploadCommand(Command):
     """Support setup.py upload."""
@@ -58,7 +56,7 @@ setup(
     author="Jaredlll08",
     author_email="jaredlll08@gmail.com",
     description="Mkdocs plugin to change links to include the site url as set via mkdocs.yml",
-    long_description=README,
+    long_description="This plugin ensures that links are full absolute links according to the site_url set in mkdocs.yml, this is useful for sites such as the [CraftTweaker Docs](https://docs.blamejared.com), which serves files out of `/version/lang/` which Mkdocs has issues handling.",
     long_description_content_type="text/markdown",
     entry_points={
         "mkdocs.plugins": [
